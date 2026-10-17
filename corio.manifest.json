@@ -4,9 +4,10 @@
   "name": "@xcye/corio-capability-openai",
   "displayName": "OpenAI media",
   "description": "Corio capability extension for OpenAI-compatible image, speech and video APIs",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "entry": "dist/index.js",
   "type": "plugin",
+  "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/openai.webp",
   "connectionSchema": {
     "baseUrl": {
       "type": "input",

@@ -1,6 +1,6 @@
 # Corio OpenAI 媒体插件
 
-本包只依赖公开 corio-plugin-sdk，实现 image.generate、speech.synthesize 和 video.generate。连接指向 OpenAI 或兼容网关，不按模型名字切换协议。
+本包只依赖公开 @xcye/corio-plugin-sdk，实现 image.generate、speech.synthesize 和 video.generate。连接指向 OpenAI 或兼容网关，不按模型名字切换协议。
 
 在公司 Plugins 中选择 SDK 插件，登记 npm、Git 或 ZIP。连接字段由完整 manifest 提供；高级手风琴配置默认连接，Agent 可以 DEFAULT 继承或 CUSTOM 配置独立账户。与公司 Providers 无绑定。实例接收 baseUrl、apiKey、headers 及各操作默认模型；params.model 可覆盖该次模型。
 
