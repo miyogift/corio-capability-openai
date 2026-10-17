@@ -1,0 +1,59 @@
+{
+  "manifestVersion": 1,
+  "sdkVersion": "^1.0.0",
+  "name": "@xcye/corio-capability-openai",
+  "displayName": "OpenAI media",
+  "description": "Corio capability extension for OpenAI-compatible image, speech and video APIs",
+  "version": "1.0.0",
+  "entry": "dist/index.js",
+  "type": "plugin",
+  "connectionSchema": {
+    "baseUrl": {
+      "type": "input",
+      "title": "Base URL",
+      "default": "https://api.openai.com/v1",
+      "required": true
+    },
+    "apiKey": {
+      "type": "input",
+      "title": "API key",
+      "secretStore": true,
+      "required": true
+    },
+    "headers": {
+      "type": "kv",
+      "title": "Additional headers",
+      "secretStore": true,
+      "default": {}
+    },
+    "imageModel": {
+      "type": "input",
+      "title": "Image model",
+      "default": "gpt-image-1"
+    },
+    "speechModel": {
+      "type": "input",
+      "title": "Speech model",
+      "default": "gpt-4o-mini-tts"
+    },
+    "videoModel": {
+      "type": "input",
+      "title": "Video model",
+      "default": "sora-2"
+    }
+  },
+  "operations": [
+    {
+      "id": "image.generate",
+      "description": "Generate images."
+    },
+    {
+      "id": "speech.synthesize",
+      "description": "Synthesize speech."
+    },
+    {
+      "id": "video.generate",
+      "description": "Generate videos."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "operation": {
+      "const": "video.generate"
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 32000
+    },
+    "params": {
+      "type": "object"
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "durationSeconds": {
+      "enum": [
+        4,
+        8,
+        12
+      ]
+    }
+  },
+  "required": [
+    "operation",
+    "prompt",
+    "params"
+  ],
+  "additionalProperties": false
+}

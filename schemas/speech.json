@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "operation": {
+      "const": "speech.synthesize"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "params": {
+      "type": "object"
+    },
+    "voice": {
+      "type": "string"
+    },
+    "format": {
+      "enum": [
+        "mp3",
+        "opus",
+        "aac",
+        "flac",
+        "wav",
+        "pcm"
+      ]
+    },
+    "speed": {
+      "type": "number",
+      "minimum": 0.25,
+      "maximum": 4
+    }
+  },
+  "required": [
+    "operation",
+    "text",
+    "params"
+  ],
+  "additionalProperties": false
+}
